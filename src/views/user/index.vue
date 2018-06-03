@@ -1,6 +1,11 @@
 <template>
   <div class="app-container">
-    <p>1111111111111</p>
+    <el-row :gutter="20">
+      <el-button @click="add" class="el-icon-plus" type="primary" round> 添加</el-button>
+      <el-button @click="edit" class="el-icon-edit" type="primary" round> 修改</el-button>
+      <el-button @click="deleted" class="el-icon-close" type="primary" round> 删除</el-button>
+    </el-row>
+
     <el-table :data="list" v-loading.body="listLoading" element-loading-text="Loading" border fit highlight-current-row>
       <el-table-column align="center" label='ID' width="95">
         <template slot-scope="scope">
@@ -61,6 +66,15 @@ export default {
     this.fetchData()
   },
   methods: {
+    add: function() {
+      alert('Hello !')
+    },
+    edit: function() {
+      alert('Hello !')
+    },
+    deleted: function() {
+      alert('Hello !')
+    },
     fetchData() {
       debugger
       this.listLoading = true
